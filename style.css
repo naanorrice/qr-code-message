@@ -5,17 +5,17 @@ body {
     height: 100vh;
     margin: 0;
     overflow: hidden;
-    font-size: 1.5rem;
+    font-size: 4rem;
     display: flex;
     justify-content: center;   /* 横方向: コンテナを中央配置 */
     align-items: flex-start;   /* 縦方向: 上寄せ（必要なら center でもOK） */
 }
 
 .container {
-    width: 55%;   
+    width: 80%;   
     max-width: 80%;
-    line-height: 1.8;
-    margin-top: 10%;          /* 上から少し余白を確保 */
+    line-height: 1.5;
+    margin-top: 1%;          /* 上から少し余白を確保 */
     text-align: left;          /* コンテナ内のテキストは左詰め */
 }
 
