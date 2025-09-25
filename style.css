@@ -6,18 +6,17 @@ body {
     margin: 0;
     overflow: hidden;
     font-size: 1.5rem;
-    display: flex;
-    justify-content: center;   /* 横方向: コンテナを中央配置 */
-    align-items: flex-start;   /* 縦方向: 上寄せ（必要なら center でもOK） */
+    text-align: center; /* 全体中央寄せ */
 }
 
 .container {
-    width: 55%;   
-    max-width: 80%;
+    width: 80%;        /* 常に画面幅の80% */
+    max-width: 1000px; /* 大画面でも広がりすぎないように */
     line-height: 1.8;
-    margin-top: 10%;          /* 上から少し余白を確保 */
-    text-align: left;          /* コンテナ内のテキストは左詰め */
+    margin: 10% auto 0; /* 上余白＋横中央 */
+    text-align: left;  /* テキストだけ左詰め */
 }
+
 
 /* ▼ここからカーソル用の追加 */
 #typing-text::after {

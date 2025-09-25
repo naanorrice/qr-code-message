@@ -25,6 +25,20 @@ function typeWriter() {
     }
 }
 
-document.addEventListener('DOMContentLoaded', () => {
-    typeWriter();
+// document.addEventListener('DOMContentLoaded', () => {
+//     typeWriter();
+// });
+
+document.getElementById("fullscreen-btn").addEventListener("click", () => {
+  const elem = document.documentElement; // ページ全体
+  if (elem.requestFullscreen) {
+    elem.requestFullscreen();
+  } else if (elem.webkitRequestFullscreen) { // Safari用
+    elem.webkitRequestFullscreen();
+  }
+
+  // 全画面に入ったらロゴを消して本文開始
+  document.getElementById("logo-screen").style.display = "none";
+  document.getElementById("text-screen").style.display = "flex";
+  typeWriter();
 });
