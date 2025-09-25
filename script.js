@@ -11,20 +11,23 @@ function typeWriter() {
         if (char === '\n') {
             textElement.innerHTML += '<br>';
             i++;
-            setTimeout(typeWriter, 0);
-        } else if (char === '.' || char === ',') {
-            textElement.innerHTML += char;
-            i++;
-            // 改行のときは lineDelay を使う
             setTimeout(typeWriter, lineDelay);
         } else {
             textElement.innerHTML += char;
             i++;
-            setTimeout(typeWriter, delay);
+            // ピリオドやカンマのときに余韻を持たせる
+            if (char === '.' || char === ',') {
+                setTimeout(typeWriter, lineDelay);
+            } else {
+                setTimeout(typeWriter, delay);
+            }
         }
     }
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-    typeWriter();
+    // 10秒間は何も表示せず、カーソルだけ点滅
+    setTimeout(() => {
+        typeWriter();
+    }, 10000);
 });
