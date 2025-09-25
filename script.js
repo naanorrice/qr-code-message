@@ -29,5 +29,5 @@ document.addEventListener('DOMContentLoaded', () => {
     // 10秒間は何も表示せず、カーソルだけ点滅
     setTimeout(() => {
         typeWriter();
-    }, 10000);
+    }, 6000);
 });
