@@ -9,6 +9,9 @@ body {
     display: flex;
     justify-content: center;   /* 横方向: コンテナを中央配置 */
     align-items: flex-start;   /* 縦方向: 上寄せ（必要なら center でもOK） */
+
+    user-select: none;      /* ← 文字選択を禁止 */
+    -webkit-user-select: none; /* Safari/iOS用 */
 }
 
 .container {
