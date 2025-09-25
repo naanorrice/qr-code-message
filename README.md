@@ -1,2 +1,2 @@
 # qr-code-message
-gone with the ptint
+gone with the print
